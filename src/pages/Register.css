@@ -1,0 +1,102 @@
+
+.FormContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: 600;
+}
+.FormWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 565px;
+    width: 500px;
+    background-color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 7px 1px #888;
+}
+.FormWrapper button{
+    font-weight: 600;
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 5px;
+    background-color: #CC0C39;
+    color: white;
+    cursor: pointer;
+}
+.FormWrapper button:hover{
+    background-color:white ;
+    color: #CC0C39;
+    border: 1px solid #CC0C39;
+}
+.FormWrapper p{
+    text-align: center;
+    margin: 15px;
+    font-size: 14px;
+}
+.FormWrapper a{
+    font-size: 17px;
+    color: #CC0C39;
+    text-decoration: none;
+}
+.UserName{
+    display: flex;
+    margin-bottom: 15px;
+}
+.UserName input{
+    width: 170px;
+    padding: 11px;
+    border-radius: 4px;
+    border: 1px solid #c7c8ce;
+    background-color: #eef0f2;
+}
+.FirstName{
+    display: flex;
+    flex-direction: column;
+    margin-right: 10px;
+}
+.LastName{
+    display: flex;
+    flex-direction: column;
+}
+.email{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.password{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.email input,
+.password input,
+.confirmPassword input{
+    width: 375px;
+    padding: 11px;
+    border-radius: 4px;
+    border: 1px solid #c7c8ce;
+    background-color: #eef0f2;
+}
+.confirmPassword {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+label{
+    color: #CC0C39;
+    margin-bottom: 5px;
+}
+.FormWrapper span{
+    color: red;
+    font-size: 12px;
+    /* display: none; */
+}
+
+

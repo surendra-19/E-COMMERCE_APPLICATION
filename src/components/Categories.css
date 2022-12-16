@@ -1,0 +1,52 @@
+
+.CategoriesWrapper{
+   display: flex;
+}
+.CategoryType{
+    flex: 1;
+    margin: 2px;
+    height: 65vh;
+    position: relative;
+}
+.CategoryType img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.CategoriesInfoContainer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.CategoriesInfoContainer h1{
+    font-size: 35px;
+    padding: 5px 25px 5px 25px;
+    border: 1px solid #CC0C39;
+    background-color:white ;
+    color:#CC0C39;
+    font-weight: 600;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.CategoriesInfoContainer button{
+    padding: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background-color:#CC0C39;
+    color: white;
+}
+.CategoriesInfoContainer button:hover{
+    background-color: white;
+    color: #CC0C39;
+    border: 1px solid #CC0C39;
+}
+
+    

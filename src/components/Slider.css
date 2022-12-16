@@ -1,0 +1,127 @@
+.SliderContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    margin-top: 1px;
+}
+.arrowLeft{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto;
+    opacity: 0.6;
+    cursor: pointer;
+    z-index: 2;
+}
+.arrowLeft:hover{
+    background-color: white;
+    opacity: 1;
+}
+.arrowRight{
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    margin: auto;
+    opacity: 0.6;
+    cursor: pointer;
+    z-index: 2;
+}
+.arrowRight:hover{
+    background-color: white;
+    opacity: 1;
+}
+.SliderWrapper{
+    display: flex;
+    height: 100%;
+}
+.slide_1{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color:#c3f8de;   
+}
+.slide_2{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color:#fceaf1;
+}
+.slide_2 .ImageContainer img{
+    width: 700px;
+    position: relative !important;
+    left: 200px !important;
+}
+.slide_3{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color:#d0f1f8;
+}
+.slide_3 .ImageContainer img{
+    margin:70px 0px 0px 50px;
+    height: 520px !important;
+    width: 95%;
+}
+.SliderImageContainer{
+    height: 100%;
+    flex: 1;
+}
+.SliderImageContainer img{
+    padding-top: 40px;
+    height: 85% !important;
+    width: 100%;
+}
+.SliderInfoContainer{
+    padding: 50px;
+    flex:1;
+}
+.SliderInfoContainer h1 {
+    font-size: 80px;
+    font-weight: 700;
+    color: black;
+}
+.SliderInfoContainer p{
+    margin:50px 0px;
+    font-size: 20px;
+    font-weight: 500;
+    color: black;
+    letter-spacing: 4px;
+}
+.SliderInfoContainer button{
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+.slides{
+    opacity: 0;
+    transition: all 1s ease;
+}
+.slideActive{
+    opacity: 1;
+    transition: all 1s ease;
+    transform: scale(1);
+}

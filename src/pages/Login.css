@@ -1,0 +1,62 @@
+.LoginContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-weight: 600;
+}
+.LoginWrapper{
+    height: 360px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 8px 1px #555;
+    border-radius: 5px;
+}
+.LoginEmail{
+    display: flex;
+    flex-direction: column;
+}
+.LoginPassword{
+    display: flex;
+    flex-direction: column;
+}
+.LoginEmail input,
+.LoginPassword input{
+    width: 230px;
+    padding: 10px;
+    border: 1px solid #c7c8ce;
+    background-color: #eef0f2;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.LoginWrapper button{
+    margin-top: 5px;
+    padding: 2px;
+    width: 100px;
+    height: 38px;
+    background-color: #CC0C39;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+.LoginWrapper button:hover{
+    background-color: white;
+    color: #CC0C39;
+    border: 1px solid #CC0C39;
+}
+.LoginWrapper p{
+    font-size: 14px;
+}
+.LoginWrapper a{
+    color: #CC0C39;
+    text-decoration: none;
+    font-size: 17px;
+}
