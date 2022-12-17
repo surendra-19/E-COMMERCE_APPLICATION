@@ -37,15 +37,27 @@
     justify-content: space-between;
     margin-left: 20px;
 }
-input{
+.searchContainer input{
     border: none;
     padding: 3px 2px 3px 5px;
-    width: 300px;
+    flex: 8;
 }
 .MenuItem{
     cursor: pointer;
     font-size: 14px;
     margin-left: 30px;
+}
+.Watchlist{
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 30px;
+}
+.WatchlistIcon{
+    font-size: 20px !important;
+    position: fixed !important;
+}
+.MenuItem .Shopping{
+    margin-left: 12px;
 }
  .left a,
  .right a{

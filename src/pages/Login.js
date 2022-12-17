@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Login.css'
 function Login() {
+  const [credentials,setCredentials] = useState([])
   const [loginDetails,setLoginDetails] = useState({
     email:"",
     password:""
@@ -12,6 +13,7 @@ function Login() {
   }
   const handleSubmit = (e)=>{
     e.preventDefault()
+    setCredentials([...credentials, loginDetails])
   }
   return (
     <div className='LoginContainer'>

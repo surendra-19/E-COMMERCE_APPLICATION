@@ -1,10 +1,12 @@
-
+.CategoriesContainer{
+    padding: 15px;
+}
 .CategoriesWrapper{
    display: flex;
 }
 .CategoryType{
     flex: 1;
-    margin: 2px;
+    margin: 10px;
     height: 65vh;
     position: relative;
 }

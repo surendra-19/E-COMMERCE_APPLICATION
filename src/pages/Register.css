@@ -11,7 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 565px;
+    height: 575px;
     width: 500px;
     background-color: white;
     border-radius: 5px;
@@ -46,7 +46,7 @@
 }
 .UserName{
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .UserName input{
     width: 170px;
@@ -54,6 +54,7 @@
     border-radius: 4px;
     border: 1px solid #c7c8ce;
     background-color: #eef0f2;
+    font-weight: 600;
 }
 .FirstName{
     display: flex;
@@ -67,12 +68,12 @@
 .email{
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .password{
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .email input,
 .password input,
@@ -82,11 +83,12 @@
     border-radius: 4px;
     border: 1px solid #c7c8ce;
     background-color: #eef0f2;
+    font-weight: 600;
 }
 .confirmPassword {
     display: flex;
     flex-direction: column;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 label{
@@ -96,7 +98,27 @@ label{
 .FormWrapper span{
     color: red;
     font-size: 12px;
-    /* display: none; */
+    max-width: 375px;
+    font-weight: 600;
+    margin-top: 3px;
+    display: none;
+}
+
+.FirstName input:invalid[fnameerror="true"],
+.LastName input:invalid[lnameerror="true"],
+.email input:invalid[emailerror="true"],
+.password input:invalid[passworderror="true"]
+ {
+    border: 1px solid red;
+}
+
+.FirstName input:invalid[fnameerror="true"] ~ span,
+.LastName input:invalid[lnameerror="true"] ~ span,
+.email input:invalid[emailerror="true"] ~ span,
+.password input:invalid[passworderror="true"] ~ span,
+.confirmPassword input:invalid ~ span {
+    display: block;
+    margin-top: 5px;
 }
 
 

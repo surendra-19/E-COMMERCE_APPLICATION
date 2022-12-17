@@ -1,0 +1,36 @@
+.NewsLetterContainer{
+    background-color: #fcf5f5;
+    height: 60vh;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.NewsTitle{
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+.NewsDescription{
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.NewsInfo{
+    width: 40%;
+    height: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid lightgray;
+}
+.NewsInfo input{
+    flex: 8;
+    padding-left: 20px;
+}
+.NewsInfo button{
+    background-color:#CC0C39;
+    color: white;
+    flex: 1.5;
+    border: none;
+    cursor: pointer;
+}

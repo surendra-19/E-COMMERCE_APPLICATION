@@ -1,9 +1,9 @@
 import React from 'react'
 import {ProductItems} from '../Data'
 import '../components/Products.css'
-// import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-// import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-// import ShareIcon from '@mui/icons-material/Share';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import ShareIcon from '@mui/icons-material/Share';
 const Products = () => {
   return (
     <div className='ProductContainer'>
@@ -14,11 +14,11 @@ const Products = () => {
               <div className='span'></div>
               {/* <img className={item.title} src={item.image} alt={item.title} /> */}
             </div>
-            {/* <div className='ProductIcons'>
-              <ShoppingCartOutlinedIcon/>
-              <FavoriteBorderOutlinedIcon/>
-              <ShareIcon/>
-            </div> */}
+            <div className='ProductIcons'>
+              <ShoppingCartOutlinedIcon className='cartIcon'/>
+              <FavoriteBorderOutlinedIcon className='heartIcon' />
+              <ShareIcon className='shareIcon'/>
+            </div>
           </div>
         ))
      }

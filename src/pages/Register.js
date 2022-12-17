@@ -3,6 +3,7 @@ import '../pages/Register.css'
 import { Link } from 'react-router-dom'
 
 function Register() {
+  const [person,setPerson] = useState([])
   const [details,setDetails] = useState({
     firstName:"",
     lastName:"",
@@ -16,6 +17,7 @@ function Register() {
     lastName:false,
     email:false,
     password:false,
+    confirmPassword:false
   })
   const changeHandler = (e)=>{
     setDetails((previous)=>{
@@ -29,12 +31,11 @@ function Register() {
   }
   const SubmitHandler = (e)=>{
     e.preventDefault()
-    console.log(details)
+    setPerson([...person,details])
   }
-  console.log(errorMsg)
   return (
     <div className='FormContainer'>
-      <form onSubmit={SubmitHandler}>
+      <form onSubmit={SubmitHandler} >
         <div className='FormWrapper'>
           <div className='UserName'>
             <div className='FirstName'>
@@ -45,7 +46,10 @@ function Register() {
                 value={details.firstName}
                 onChange={changeHandler}
                 required={details.required}
+                onBlur={errorHandler}
+                fnameerror={errorMsg.firstName.toString()}
               />
+              <span>Enter your name</span>
             </div>
             <div className='LastName'>
               <label>Last Name</label>
@@ -55,7 +59,10 @@ function Register() {
                 value={details.lastName} 
                 onChange={changeHandler}
                 required={details.required}
+                onBlur={errorHandler}
+                lnameerror={errorMsg.lastName.toString()}
               />
+              <span>Enter your family name</span>
             </div>
           </div>
           <div className="email">
@@ -67,11 +74,9 @@ function Register() {
               onChange={changeHandler} 
               onBlur={errorHandler}
               required={details.required}
+              emailerror={errorMsg.email.toString()}
             />
-            {
-              errorMsg.email === true && <span>It should be a valid Email!</span>
-            }
-            
+            <span>It should be a valid Email</span>
           </div>
           <div className='password'>
             <label>Password</label>
@@ -83,10 +88,9 @@ function Register() {
               onBlur={errorHandler}
               required={details.required}
               pattern="^(?=.{8,}$)(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).*$"
+              passworderror={errorMsg.password.toString()}
             />
-            {
-              errorMsg.password === true && <span>Password should be 8-20 characters, Should include 1 uppercase,<br/>1 lowercase, 1 special character and 1 number!</span>
-            }
+            <span>Password should be 8-20 characters, should include 1 uppercase, 1 lowercase, 1 special character and 1 number</span>
           </div>
           <div className='confirmPassword'>
             <label>Confirm Password</label>
@@ -99,10 +103,7 @@ function Register() {
               required={details.required}
               pattern={details.password}
             />
-            {
-              details.confirmPassword!=="" && details.confirmPassword!== details.password &&  
-              <span>Passwords must be same.</span>
-            }
+            {details.confirmPassword !=="" && details.confirmPassword !== details.password && <span className='passCheck'>Password is not same</span>}
           </div>
           <button>Register</button>
           <p>Have an account?<Link to='/login'> Login</Link></p>
